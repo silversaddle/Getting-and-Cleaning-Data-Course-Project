@@ -44,15 +44,12 @@ The code is performs the following:
 
 Downloads the given url to the given destiny file. It also creates `data` dir if it doesn't exist.
 
-#### Unzip DataSet to /data directory
-
-Unzips zip file 
-
+*Unzip DataSet to /data directory
+**Unzips zip file 
 *Load Packages
-Loads dplyr, data.table, and tidyr packages
-
-###Set file Path
-Sets file path
+**Loads dplyr, data.table, and tidyr packages
+*Set file Path
+**Sets file path
 
 
 ### Read Data Files
@@ -66,11 +63,10 @@ Examples:
 * `UCI HAR Dataset/train/subject_train.txt`
 
 
-
-## Manipulating data
+### Manipulating data
 
 Merges the training and the test sets to create one data set and rename variables "subject" and "activityNum"
 
-## Writing final data to .txt
+### Writing final data to .txt
 
 Writes the TidyData.txt using write.table.
