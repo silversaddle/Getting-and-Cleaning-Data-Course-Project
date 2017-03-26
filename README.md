@@ -74,6 +74,6 @@ The returned `data.frame` contains a column `Activity` with labels integer codes
 
 *Merges the training and the test sets to create one data set and rename variables "subject" and "activityNum"
 
-## Writing final data to CSV
+## Writing final data to .txt
 
-Writes the TidyData.csv.
+Writes the TidyData.txt using write.table.
