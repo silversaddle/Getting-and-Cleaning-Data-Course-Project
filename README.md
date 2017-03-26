@@ -44,12 +44,12 @@ The code is performs the following:
 
 Downloads the given url to the given destiny file. It also creates `data` dir if it doesn't exist.
 
-*Unzip DataSet to /data directory
-*Unzips zip file 
-*Load Packages
-*Loads dplyr, data.table, and tidyr packages
-*Set file Path
-*Sets file path
+* Unzip DataSet to /data directory
+* Unzips zip file 
+* Load Packages
+* Loads dplyr, data.table, and tidyr packages
+* Set file Path
+* Sets file path
 
 
 ### Read Data Files
