@@ -48,7 +48,7 @@ Downloads the given url to the given destiny file. It also creates `data` dir if
 
 Unzips zip file 
 
-###Load Packages
+*Load Packages
 Loads dplyr, data.table, and tidyr packages
 
 ###Set file Path
