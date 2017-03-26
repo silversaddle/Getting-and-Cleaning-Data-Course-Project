@@ -16,8 +16,9 @@ library(tidyr)
 
 ###Set file Path
 filesPath <- "C:/Users/khanem/datasciencecoursera/UCI HAR Dataset/data/UCI HAR Dataset"
-# Create Data Tables
-# Read subject files
+
+# Read Subject files
+
 dataSubjectTrain <- tbl_df(read.table(file.path(filesPath, "train", "subject_train.txt")))
 dataSubjectTest  <- tbl_df(read.table(file.path(filesPath, "test" , "subject_test.txt" )))
 
@@ -25,13 +26,14 @@ dataSubjectTest  <- tbl_df(read.table(file.path(filesPath, "test" , "subject_tes
 dataActivityTrain <- tbl_df(read.table(file.path(filesPath, "train", "Y_train.txt")))
 dataActivityTest  <- tbl_df(read.table(file.path(filesPath, "test" , "Y_test.txt" )))
 
-#Read data files.
+#Read Train and Test data files.
 dataTrain <- tbl_df(read.table(file.path(filesPath, "train", "X_train.txt" )))
 dataTest  <- tbl_df(read.table(file.path(filesPath, "test" , "X_test.txt" )))
 
 
 # Merges the training and the test sets to create one data set.
 #and rename variables "subject" and "activityNum"
+
 alldataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
 setnames(alldataSubject, "V1", "subject")
 alldataActivity<- rbind(dataActivityTrain, dataActivityTest)
@@ -40,7 +42,7 @@ setnames(alldataActivity, "V1", "activityNum")
 #combine the DATA training and test files
 dataTable <- rbind(dataTrain, dataTest)
 
-# name variables according to feature e.g.(V1 = "tBodyAcc-mean()-X")
+# name variables according to feature 
 dataFeatures <- tbl_df(read.table(file.path(filesPath, "features.txt")))
 setnames(dataFeatures, names(dataFeatures), c("featureNum", "featureName"))
 colnames(dataTable) <- dataFeatures$featureName
