@@ -29,13 +29,13 @@ From the data set in step 4, creates a second, independent tidy data set with th
 
 This document describes the code inside `run_analysis.R`.
 
-The code is splitted (by comments) in some sections:
+The code is performs the following:
 
 * Download the Data
 * Unzip DataSet to /data directory
 * Load Packages
 * Set file Path
-* Create DataTables
+* Read Data files
 * Manipulating data
 * Writing final data to CSV
 
@@ -55,7 +55,7 @@ Loads dplyr, data.table, and tidyr packages
 Sets file path
 
 
-### Create DataTables
+### Read Data Files
 
 Read dataset files from UCI HAR to given name and prefix. Know names are "train" and "test". Known prefixes are "X", "y" and "subject".
 
@@ -66,13 +66,10 @@ Examples:
 * `UCI HAR Dataset/train/subject_train.txt`
 
 
-Loads data, labels and subjects from UCI HAR dataset to a `data.frame`.
-The returned `data.frame` contains a column `Activity` with labels integer codes, a column `Subject` with subjects integer codes and all other columns from data.
-
 
 ## Manipulating data
 
-*Merges the training and the test sets to create one data set and rename variables "subject" and "activityNum"
+Merges the training and the test sets to create one data set and rename variables "subject" and "activityNum"
 
 ## Writing final data to .txt
 
