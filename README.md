@@ -42,7 +42,7 @@ The code is performs the following:
 ### Download the Data
 Downloads the given url to data directory. If data directory does not exist, the code will create the data directory.
 
-###Unzip DataSet to /data directory
+### Unzip DataSet to /data directory
 Unzips zip file 
 
 ### Load Packages
