@@ -28,7 +28,6 @@ Appropriately labels the data set with descriptive variable names.
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ## This document describes the code inside `run_analysis.R`.
-
 The code is performs the following:
 
 * Download the Data
@@ -41,19 +40,18 @@ The code is performs the following:
 
 
 ### Download the Data
+Downloads the given url to data directory. If data directory does not exist, the code will create the data directory.
 
-Downloads the given url to the given destiny file. It also creates `data` dir if it doesn't exist.
+###Unzip DataSet to /data directory
+Unzips zip file 
 
-* Unzip DataSet to /data directory
-* Unzips zip file 
-* Load Packages
-* Loads dplyr, data.table, and tidyr packages
-* Set file Path
-* Sets file path
+### Load Packages
+Loads dplyr, data.table, and tidyr packages
 
+### Set file Path
+Sets file path
 
 ### Read Data Files
-
 Read dataset files from UCI HAR to given name and prefix. Know names are "train" and "test". Known prefixes are "X", "y" and "subject".
 
 Examples:
@@ -62,11 +60,8 @@ Examples:
 * `UCI HAR Dataset/train/y_train.txt`
 * `UCI HAR Dataset/train/subject_train.txt`
 
-
 ### Manipulating data
-
 Merges the training and the test sets to create one data set and rename variables "subject" and "activityNum"
 
 ### Writing final data to .txt
-
 Writes the TidyData.txt using write.table.
